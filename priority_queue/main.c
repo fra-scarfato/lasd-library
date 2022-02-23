@@ -46,7 +46,7 @@ int main()
     printf("\nThis the queue.\n");
     print_array(queue, heap_size);
     heapsort(queue, heap_size);
-    printf("\nThis is the heap tree sorte by heapsort\n");
+    printf("\nThis is the heap tree sorted by heapsort\n");
     print_array(queue, heap_size);
 
     int choose;

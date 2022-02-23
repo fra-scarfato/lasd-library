@@ -90,7 +90,7 @@ void insertion_sort()
     print_array(array, n);
 }
 
-void insertion(int *array, int n)
+void insertion(int *array, int n)   //O(n^2) NEL CASO PEGGIORE POICHÈ N-1 CONFRONTI PER UN SINGOLO NUMERO, ESSENDO N I NUMERI
 {
     int temp;
     int next;
@@ -112,7 +112,7 @@ void insertion(int *array, int n)
 
 //HEAP SORT
 
-void heap_sort()
+void heap_sort()        //NODO PADRE SEMPRE MAGG O UGUALE DEI NODI FIGLIO
 {
     int array_size;
     int *array;
@@ -152,7 +152,7 @@ void swap(int *array, int max, int min)
     array[max] = temp;
 }
 
-void heap(int *array, int array_size)
+void heap(int *array, int array_size)  //HEAPSORT O(n * log n)
 {
     int heap_size;
 
@@ -167,7 +167,7 @@ void heap(int *array, int array_size)
 
 }
 
-void build_heap(int *array, int array_size, int *heap_size)
+void build_heap(int *array, int array_size, int *heap_size) //FA N CHIAMATE A HEAPIFY QUINDI O(n) * O(log n) = O(n * log n)
 {
     *heap_size = array_size;
     
@@ -176,7 +176,7 @@ void build_heap(int *array, int array_size, int *heap_size)
     
 }
 
-void heapify(int *array, int i, int *heap_size)
+void heapify(int *array, int i, int *heap_size) //O(h) OVVERO O(log n)
 {
     int lt, rt, largest;
 
